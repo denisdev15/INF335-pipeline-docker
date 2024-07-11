@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    tools {
+        // Install the Docker version configured as "docker" and add it to the path.
+        dockerTool "docker"
+    }
+
     stages {
         stage('Build') {
             steps {
